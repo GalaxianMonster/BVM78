@@ -21,7 +21,7 @@ If you would like to use it on some project, you may.
   - [ ] Registers
 - [ ] The official architecture
   - [x] Architecture overview
-  - [ ] Instruction formats
+  - [x] Instruction formats
   - [ ] Initialization
   - [ ] Deinitialization
   - [ ] Opcodes functionality
