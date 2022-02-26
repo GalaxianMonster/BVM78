@@ -20,6 +20,7 @@ If you would like to use it on some project, you may.
   - [ ] Traps and interrupts
   - [ ] Registers
 - [ ] The official architecture
+  - [x] Architecture overview
   - [ ] Instruction formats
   - [ ] Initialization
   - [ ] Deinitialization
