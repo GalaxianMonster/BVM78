@@ -1,0 +1,106 @@
+-- BVM78 ARCHITECTURE OVERVIEW CFD0F6 --
+
+----
+Registers:
+  8 bit registers:
+    0000 - ab - 8 bit accumulator
+    0001 - bb - 8 bit base
+    0010 - cb - 8 bit control
+    0011 - db - 8 bit data
+    
+    0100 - 0b - 8 bit program reg 0
+    0101 - 1b - 8 bit program reg 1
+    0110 - 2b - 8 bit program reg 2
+    0111 - 3b - 8 bit program reg 3
+    1000 - 4b - 8 bit program reg 4
+    1001 - 5b - 8 bit program reg 5
+    1010 - 6b - 8 bit program reg 6
+    1011 - 7b - 8 bit program reg 7
+    1100 - 8b - 8 bit program reg 8
+    1101 - 9b - 8 bit program reg 9
+    1110 - 10b - 8 bit program reg 10
+    1111 - 11b - 8 bit program reg 11
+    
+  16 bit registers:
+    0000 - aw - 16 bit accumulator
+    0001 - bw - 16 bit base
+    0010 - cw - 16 bit control
+    0011 - dw - 16 bit data
+    
+    0100 - 0w - 16 bit program reg 0
+    0101 - 1w - 16 bit program reg 1
+    0110 - 2w - 16 bit program reg 2
+    0111 - 3w - 16 bit program reg 3
+    1000 - 4w - 16 bit program reg 4
+    1001 - 5w - 16 bit program reg 5
+    1010 - 6w - 16 bit program reg 6
+    1011 - 7w - 16 bit program reg 7
+    1100 - 8w - 16 bit program reg 8
+    1101 - 9w - 16 bit program reg 9
+    1110 - 10w - 16 bit program reg 10
+    1111 - 11w - 16 bit program reg 11
+    
+  32 bit registers:
+    0000 - ad - 32 bit accumulator
+    0001 - bd - 32 bit base
+    0010 - cd - 32 bit control
+    0011 - dd - 32 bit data
+    
+    0100 - 0d - 32 bit program reg 0
+    0101 - 1d - 32 bit program reg 1
+    0110 - 2d - 32 bit program reg 2
+    0111 - 3d - 32 bit program reg 3
+    1000 - 4d - 32 bit program reg 4
+    1001 - 5d - 32 bit program reg 5
+    1010 - 6d - 32 bit program reg 6
+    1011 - 7d - 32 bit program reg 7
+    1100 - 8d - 32 bit program reg 8
+    1101 - 9d - 32 bit program reg 9
+    1110 - 10d - 32 bit program reg 10
+    1111 - 11d - 32 bit program reg 11
+    
+  64 bit registers:
+    0000 - aq - 64 bit accumulator
+    0001 - bq - 64 bit base
+    0010 - cq - 64 bit control
+    0011 - dq - 64 bit data
+    
+    0100 - sp - 64 bit stack pointer
+    0101 - bp - 64 bit base pointer
+    0110 - ip - 64 bit instruction pointer
+    
+    0111 - 0q - 16 bit program reg 0
+    1000 - 1q - 16 bit program reg 1
+    1001 - 2q - 16 bit program reg 2
+    1010 - 3q - 16 bit program reg 3
+    1011 - 4q - 16 bit program reg 4
+    1100 - 5q - 16 bit program reg 5
+    1101 - 6q - 16 bit program reg 6
+    1110 - 7q - 16 bit program reg 7
+    1111 - 8q - 16 bit program reg 8
+----
+
+----
+Initialization:
+  1. Set all registers to 0
+  2. Set ip to program start address defined by software
+  3. Software does what it needs to
+  4. Start executing code once execution function is called
+----
+
+
+----
+Execution:
+  1. Decode instruction
+  2. Check for errors and return the error if there is one
+  3. Execute instruction by opcode
+  4. If instruction requested for an interrupt or trap, invoke it
+  5. Just like execution step 2
+----
+
+----
+Deinitialization:
+  1. Free memory allocated
+  2. Set all registers to 0
+  3. Set memory bytes count to 0
+----
