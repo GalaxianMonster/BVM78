@@ -1,0 +1,39 @@
+-- BVM78 ARCHITECTURE FORMAT CFD0F6 --
+
+----
+Single instruction format:
+  00000000
+  ^
+  opcode
+  
+  opcode: 0 to 255
+  
+  instruction size: 1 byte
+----
+
+----
+Register instruction format:
+  00000000 0000 0000
+  ^        ^    ^
+  opcode   dst0 src0
+  
+  opcode: 0 to 255
+  dst0: register number, 0 to 15
+  src0: register number, 0 to 15
+  
+  instruction size: 2 bytes
+----
+
+----
+Immediate instruction format:
+  00000000 0000 0000  00000000
+  ^        ^    ^     ^
+  opcode   dst0 none  imm0
+  
+  opcode: 0 to 255
+  dst0: register number, 0 to 15
+  none: represents nothing
+  imm0: value that can be 1 to 8 bytes
+  
+  instruction size: 3, 4, 6, 10
+----
