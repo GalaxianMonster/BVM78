@@ -22,10 +22,10 @@ If you would like to use it on some project, you may.
 - [ ] The official architecture
   - [x] Architecture overview
   - [x] Instruction formats
-  - [ ] Initialization
-  - [ ] Deinitialization
+  - [x] Initialization
+  - [x] Deinitialization
   - [ ] Opcodes functionality
   - [ ] Traps and interrupts design
-  - [ ] Purpose of each registers
-  - [ ] Number of registers
+  - [x] Purpose of each registers
+  - [x] Number of registers
   - [ ] Stack functionality
