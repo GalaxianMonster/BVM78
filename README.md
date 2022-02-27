@@ -25,7 +25,7 @@ If you would like to use it on some project, you may.
   - [x] Initialization
   - [x] Deinitialization
   - [ ] Opcodes functionality
-  - [ ] Traps and interrupts design
+  - [x] Traps and interrupts design
   - [x] Purpose of each registers
   - [x] Number of registers
   - [x] Stack functionality
