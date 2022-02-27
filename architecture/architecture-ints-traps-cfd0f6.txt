@@ -1,0 +1,23 @@
+-- BVM78 ARCHITECTURE INTERRUPTS and TRAPS CFD0F6 --
+
+----
+Traps:
+  They are used to be able to jump to the requested trap routine.
+  
+  Program being executed by BVM78 can set each trap routines address(which is basically add or remove trap routines).
+  
+  Opcodes that handles traps are:
+    trap
+    strp
+    
+  They will be explained in architecture-opcodes-cfd0f6.txt
+----
+
+----
+Interrupts:
+  They are used to invoke the program to do a interrupt routine.
+  
+  Unlike traps, program being executed by BVM78 are not able to set each interrupt routines.
+  
+  Opcode used to interrupt is: int.
+----
