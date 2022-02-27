@@ -1,0 +1,15 @@
+-- BVM78 ARCHITECTURE OPCODES CFD0F6 --
+
+----
+Memory-related opcodes:
+  00               | movrb   | r0, r1      | 8 bit      | Move r1 to r0
+  01               | movib   | r0, imm     | 8 bit      | Move imm to r0
+  02               | movm0b  |             | 8 bit      | Move memory[bq] to ab
+  03               | movm1b  |             | 8 bit      | Move ab to memory[bq]
+  
+  04 - 07          |         |             | 16 bit     | 16 bit versions of opcodes 00 - 03
+  08 - 0B          |         |             | 32 bit     | 32 bit versions of opcodes 00 - 03
+  0C - 0F          |         |             | 64 bit     | 64 bit versions of opcodes 00 - 03
+  
+  Total opcodes: 16
+----
