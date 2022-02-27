@@ -28,4 +28,4 @@ If you would like to use it on some project, you may.
   - [ ] Traps and interrupts design
   - [x] Purpose of each registers
   - [x] Number of registers
-  - [ ] Stack functionality
+  - [x] Stack functionality
