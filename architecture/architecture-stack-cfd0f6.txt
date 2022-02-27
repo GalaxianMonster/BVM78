@@ -1,0 +1,54 @@
+-- BVM78 ARCHITECTURE STACK CFD0F6 --
+
+----
+Functionality:
+  The BVM78 Stack functionality might be similar with x86
+  When a value is pushed into the stack, the stack pointer decreases.
+  When a value is popped from the stack, the stack pointer increases.
+  
+  Setup - 
+    bp: 0x2,
+    sp: 0x2,
+    stack size: 2 bytes
+  
+  Push -
+    val_width: byte,
+    val: 0xfe,
+    val_addr: 0x2,
+    bp: 0x2,
+    sp: 0x1,
+    stack size: 1 byte
+  
+  Pop -
+    val_width: byte,
+    val_returned: 0xfe,
+    bp: 0x2,
+    sp: 0x2,
+    stack size: 2 bytes
+----
+
+----
+2 types of errors:
+  - Stack overflow
+      When the stack has no enough bytes to store the value during a. 
+      push instruction, BVM78 halts and returns the error code to the
+      software.
+  - Stack underflow
+      When the stack has no enough bytes stored in it during a pop
+      instruction, BVM78 halts and returns the error code to the 
+      software.
+----
+
+----
+Initialization:
+  bp: 0
+  sp: 0
+  
+  Stack is not yet ready to have values be pushed or popped.
+----
+
+----
+Deinitialization:
+  BVM78 does nothing to the stack as it should be handled by the
+  program that BVM78 is executing.
+----
