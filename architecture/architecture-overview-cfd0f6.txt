@@ -84,8 +84,9 @@ Registers:
 Initialization:
   1. Set all registers to 0
   2. Set ip to program start address defined by software
-  3. Software does what it needs to
-  4. Start executing code once execution function is called
+  3. Set memory bus function which is handled by software
+  4. Software does what it needs to
+  5. Start executing code once execution function is called
 ----
 
 
